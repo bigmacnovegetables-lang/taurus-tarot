@@ -165,6 +165,29 @@
   }
   .summary-box p{font-size:17px; color:#5a4c3f; max-width:520px; margin:0 auto;}
 
+  /* TIPS SECTION */
+  .tips-grid{display:flex; flex-direction:column; gap:24px;}
+  .tip-card{
+    background:var(--white-soft);
+    border-radius:24px;
+    padding:30px 32px;
+    box-shadow:0 12px 34px -20px rgba(74,60,50,0.22);
+    border:1px solid rgba(0,0,0,0.04);
+    display:flex; gap:20px; align-items:flex-start;
+  }
+  .tip-icon{
+    width:46px; height:46px; min-width:46px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; color:white;
+  }
+  .tip-card:nth-child(1) .tip-icon{background:var(--terracotta);}
+  .tip-card:nth-child(2) .tip-icon{background:var(--lavender);}
+  .tip-card:nth-child(3) .tip-icon{background:var(--sage);}
+  .tip-text h4{
+    font-family:'Noto Serif TC', serif; font-size:17.5px; margin-bottom:8px; color:var(--ink);
+  }
+  .tip-text p{font-size:15px; color:#5a4c3f; margin:0;}
+
   /* MEDITATION CTA */
   .cta-section{padding:80px 0 100px;}
   .cta-card{
@@ -334,7 +357,40 @@
     </div>
   </section>
 
+  <section id="tips">
+    <h2 class="section-title">給金牛座的小小建議</h2>
+    <p class="section-sub">情緒不穩的時候，金牛座最常見的兩種反應，一個是拼命付出討好，一個是用花錢來證明自己過得很好。其實不用走極端，試試這幾個小調整：</p>
+    <div class="divider"></div>
+
+    <div class="tips-grid">
+      <div class="tip-card reveal">
+        <div class="tip-icon">💛</div>
+        <div class="tip-text">
+          <h4>付出前，先問自己一個問題</h4>
+          <p>下次想為對方多做一點什麼之前，先停三秒問自己：「這是我真的想做，還是怕他不滿意才做？」分得清楚，你的付出才不會變成一種討好。</p>
+        </div>
+      </div>
+
+      <div class="tip-card reveal">
+        <div class="tip-icon">🛍️</div>
+        <div class="tip-text">
+          <h4>想花錢消氣，先設一個小上限</h4>
+          <p>心情不好想犒賞自己沒問題，但報復性消費容易愈花愈空虛。可以先給自己訂一個小額度（例如一杯好咖啡、一場電影），讓花費變成「療癒自己」，而不是「跟誰賭氣」。</p>
+        </div>
+      </div>
+
+      <div class="tip-card reveal">
+        <div class="tip-icon">🌱</div>
+        <div class="tip-text">
+          <h4>找一件只屬於自己的小事</h4>
+          <p>不管是泡澡、種一盆植物，還是寫幾行日記，每天留十分鐘做一件跟對方無關、只為自己做的小事，會幫你慢慢找回那個不靠關係也很穩的自己。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
+
 
 <section class="cta-section">
   <div class="container">
