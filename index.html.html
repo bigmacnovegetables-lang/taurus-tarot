@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金牛座 ♉ 7月感情運勢・盧恩占卜</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #FBF3E7;
+    --cream-deep: #F3E6D3;
+    --terracotta: #E8A798;
+    --sage: #A8BFA0;
+    --lavender: #C9B8D9;
+    --ink: #4A3C32;
+    --gold: #D4A857;
+    --white-soft: #FFFCF7;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(ellipse 600px 400px at 10% 0%, rgba(201,184,217,0.25), transparent 60%),
+      radial-gradient(ellipse 500px 500px at 90% 20%, rgba(168,191,160,0.2), transparent 60%),
+      var(--cream);
+    color:var(--ink);
+    font-family:'Noto Sans TC', sans-serif;
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+  .container{max-width:760px; margin:0 auto; padding:0 28px;}
+
+  /* decorative floating dots */
+  .floaty{
+    position:fixed; border-radius:50%; opacity:0.35; filter:blur(1px);
+    animation:float 9s ease-in-out infinite; z-index:0; pointer-events:none;
+  }
+
+  @keyframes float{
+    0%,100%{transform:translateY(0px) translateX(0px);}
+    50%{transform:translateY(-22px) translateX(10px);}
+  }
+
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(28px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  .reveal{animation:fadeUp 0.9s cubic-bezier(.2,.7,.3,1) both;}
+
+  /* HERO */
+  header.hero{
+    position:relative; text-align:center; padding:90px 24px 70px;
+    overflow:hidden;
+  }
+  .wheel-bg{
+    position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+    width:480px; height:480px; opacity:0.16; z-index:0;
+  }
+  .hero-content{position:relative; z-index:1;}
+  .eyebrow{
+    font-size:14px; letter-spacing:0.35em; color:var(--terracotta);
+    font-weight:700; margin-bottom:18px; text-transform:uppercase;
+  }
+  .hero h1{
+    font-family:'Noto Serif TC', serif;
+    font-weight:900;
+    font-size:clamp(36px, 7vw, 58px);
+    line-height:1.3;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+  .hero .taurus-symbol{
+    font-size:1.1em; color:var(--terracotta); vertical-align:-0.05em;
+  }
+  .hero .sub{
+    font-family:'Noto Serif TC', serif;
+    font-size:clamp(20px, 4vw, 26px);
+    color:var(--ink);
+    opacity:0.85;
+    margin-bottom:30px;
+  }
+  .hero p.lede{
+    max-width:560px; margin:0 auto; font-size:16.5px; color:#6b5a4c;
+  }
+  .scroll-hint{
+    margin-top:50px; font-size:13px; letter-spacing:0.2em; color:var(--ink);
+    opacity:0.45;
+  }
+  .scroll-hint svg{display:block; margin:10px auto 0; animation:bob 1.8s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)}}
+
+  /* SECTION GENERIC */
+  section{position:relative; padding:60px 0; z-index:1;}
+  .section-title{
+    font-family:'Noto Serif TC', serif;
+    font-weight:700;
+    font-size:clamp(24px,4vw,30px);
+    text-align:center;
+    margin-bottom:14px;
+  }
+  .section-sub{
+    text-align:center; color:#7c6b5c; font-size:15px; max-width:480px;
+    margin:0 auto 50px;
+  }
+  .divider{
+    width:60px; height:2px; margin:0 auto 50px;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  /* INTRO */
+  .intro-box{
+    background:var(--white-soft);
+    border-radius:28px;
+    padding:42px 38px;
+    box-shadow:0 18px 50px -22px rgba(74,60,50,0.25);
+    border:1px solid rgba(212,168,87,0.25);
+    font-size:16.5px;
+    color:#5a4c3f;
+  }
+  .intro-box strong{color:var(--terracotta); font-weight:700;}
+
+  /* RUNE CARDS */
+  .rune-list{display:flex; flex-direction:column; gap:36px;}
+  .rune-card{
+    background:var(--white-soft);
+    border-radius:26px;
+    padding:36px 34px;
+    box-shadow:0 14px 40px -20px rgba(74,60,50,0.22);
+    position:relative;
+    border:1px solid rgba(0,0,0,0.04);
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .rune-card:hover{transform:translateY(-6px); box-shadow:0 22px 50px -20px rgba(74,60,50,0.3);}
+  .rune-top{display:flex; align-items:center; gap:18px; margin-bottom:18px;}
+  .rune-glyph{
+    width:62px; height:62px; min-width:62px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Noto Serif TC', serif; font-size:26px; font-weight:700; color:white;
+  }
+  .rune-name-wrap{flex:1;}
+  .rune-name{font-family:'Noto Serif TC', serif; font-weight:700; font-size:20px;}
+  .rune-pos{
+    display:inline-block; margin-top:4px; font-size:12.5px; padding:3px 12px;
+    border-radius:999px; font-weight:700; letter-spacing:0.05em;
+  }
+  .pos-upright{background:rgba(168,191,160,0.25); color:#5f7a55;}
+  .pos-reverse{background:rgba(232,167,152,0.3); color:#b85f47;}
+  .rune-body{color:#5a4c3f; font-size:15.5px;}
+
+  .c1 .rune-glyph{background:var(--lavender);}
+  .c2 .rune-glyph{background:var(--terracotta);}
+  .c3 .rune-glyph{background:var(--sage);}
+  .c4 .rune-glyph{background:var(--gold);}
+
+  /* SUMMARY */
+  .summary-box{
+    background:linear-gradient(135deg, rgba(201,184,217,0.18), rgba(232,167,152,0.18));
+    border-radius:28px; padding:44px 38px; text-align:center;
+    border:1px solid rgba(212,168,87,0.3);
+  }
+  .summary-box .quote-mark{
+    font-family:'Noto Serif TC', serif; font-size:50px; color:var(--terracotta);
+    opacity:0.5; line-height:0.5; margin-bottom:10px; display:block;
+  }
+  .summary-box p{font-size:17px; color:#5a4c3f; max-width:520px; margin:0 auto;}
+
+  /* MEDITATION CTA */
+  .cta-section{padding:80px 0 100px;}
+  .cta-card{
+    background:var(--ink);
+    border-radius:32px;
+    padding:54px 40px;
+    color:var(--cream);
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta-card::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(212,168,87,0.25), transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(201,184,217,0.2), transparent 50%);
+  }
+  .cta-inner{position:relative; z-index:1;}
+  .cta-tag{
+    display:inline-block; font-size:13px; letter-spacing:0.3em; color:var(--gold);
+    font-weight:700; margin-bottom:18px; text-transform:uppercase;
+  }
+  .cta-card h2{
+    font-family:'Noto Serif TC', serif; font-weight:700;
+    font-size:clamp(24px,4.5vw,32px); margin-bottom:18px; color:#FBF3E7;
+  }
+  .cta-card p{
+    color:#e3d9cb; font-size:15.5px; max-width:480px; margin:0 auto 36px;
+  }
+  .cta-divider{
+    width:48px; height:1px; background:var(--gold); margin:36px auto; opacity:0.5;
+  }
+  .booking-block{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(212,168,87,0.35);
+    border-radius:20px;
+    padding:30px 28px;
+    max-width:420px;
+    margin:0 auto;
+  }
+  .booking-block h3{
+    font-family:'Noto Serif TC', serif; font-size:18px; margin-bottom:14px; color:var(--gold);
+  }
+  .booking-block p{margin-bottom:0; color:#f1e9dd; font-size:15px;}
+  .line-id{
+    display:inline-flex; align-items:center; gap:8px;
+    margin-top:16px; padding:10px 22px;
+    background:var(--gold); color:#3a2f25; font-weight:700;
+    border-radius:999px; font-size:15px; letter-spacing:0.02em;
+    text-decoration:none;
+  }
+
+  footer{
+    text-align:center; padding:40px 24px 60px;
+    font-size:13px; color:#9c8b7a; letter-spacing:0.05em;
+  }
+
+  @media (max-width:600px){
+    .hero{padding:70px 20px 50px;}
+    .intro-box, .summary-box{padding:32px 24px;}
+    .rune-card{padding:28px 22px;}
+    .cta-card{padding:42px 26px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="floaty" style="width:14px;height:14px;background:var(--terracotta);top:12%;left:8%;animation-delay:0s;"></div>
+<div class="floaty" style="width:10px;height:10px;background:var(--sage);top:30%;left:88%;animation-delay:2s;"></div>
+<div class="floaty" style="width:18px;height:18px;background:var(--lavender);top:65%;left:5%;animation-delay:4s;"></div>
+<div class="floaty" style="width:12px;height:12px;background:var(--gold);top:80%;left:92%;animation-delay:1s;"></div>
+
+<header class="hero">
+  <svg class="wheel-bg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="95" fill="none" stroke="#C9B8D9" stroke-width="1.5"/>
+    <circle cx="100" cy="100" r="75" fill="none" stroke="#E8A798" stroke-width="1.2"/>
+    <circle cx="100" cy="100" r="55" fill="none" stroke="#A8BFA0" stroke-width="1"/>
+    <circle cx="100" cy="100" r="35" fill="none" stroke="#D4A857" stroke-width="1"/>
+  </svg>
+  <div class="hero-content reveal">
+    <div class="eyebrow">July Tarot &amp; Rune Reading</div>
+    <h1><span class="taurus-symbol">♉</span> 金牛座</h1>
+    <div class="sub">2026・7月感情運勢｜盧恩符文解答</div>
+    <p class="lede">這個月的牌陣，沒有要告訴你「會不會有結果」，而是想陪你看清楚——這陣子心裡那股忽穩忽亂的感覺，究竟從何而來。</p>
+    <div class="scroll-hint">
+      開 始 閱 讀
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A3C32" stroke-width="1.6"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section id="intro">
+    <div class="intro-box reveal">
+      <p>這個月的金牛座，感情課題不在「對方愛不愛你」，而在<strong>你能不能先穩住自己</strong>。這次抽到的四張符文，像是一面鏡子，照出你最近在關係裡反覆拉扯的心情——既想靠近，又怕受傷；既想觀察清楚，卻又忍不住想太多。</p>
+    </div>
+  </section>
+
+  <section id="runes">
+    <h2 class="section-title">四張符文，照見你的心事</h2>
+    <p class="section-sub">每一張牌都不是定論，而是一個提醒。慢慢讀，你會發現它說的其實是你早就知道的事。</p>
+    <div class="divider"></div>
+
+    <div class="rune-list">
+
+      <article class="rune-card c1 reveal">
+        <div class="rune-top">
+          <div class="rune-glyph">ᚾ</div>
+          <div class="rune-name-wrap">
+            <div class="rune-name">納奧蒂資 Nauthiz</div>
+            <span class="rune-pos pos-upright">正位</span>
+          </div>
+        </div>
+        <div class="rune-body">
+          這張牌代表「需要、限制與內在的緊縮感」。出現在你的感情牌陣裡，反映出你這陣子很在意對方的一舉一動、一句話、一個已讀不回，內心其實是一種「匱乏感」在作祟——怕自己不夠好、怕關係不夠穩。這份在意本身沒有錯，但若任由它牽著走，反而會把自己困住。
+        </div>
+      </article>
+
+      <article class="rune-card c2 reveal">
+        <div class="rune-top">
+          <div class="rune-glyph">ᚹ</div>
+          <div class="rune-name-wrap">
+            <div class="rune-name">Wunjo 喜悅</div>
+            <span class="rune-pos pos-reverse">逆位</span>
+          </div>
+        </div>
+        <div class="rune-body">
+          正位的 Wunjo 代表和諧與幸福，逆位則提醒你：最近感情裡的喜悅感正在流失，你可能很努力想維持表面的好，內心卻沒有真正放鬆過。一下覺得「我們很穩」，一下又覺得「是不是要結束了」，這種忽高忽低，正是這張逆位牌在說的失衡狀態。
+        </div>
+      </article>
+
+      <article class="rune-card c3 reveal">
+        <div class="rune-top">
+          <div class="rune-glyph">ᚺ</div>
+          <div class="rune-name-wrap">
+            <div class="rune-name">哈格拉茲 Hagalaz</div>
+            <span class="rune-pos pos-reverse">逆位</span>
+          </div>
+        </div>
+        <div class="rune-body">
+          哈格拉茲本是「突發混亂、無法控制的風暴」，逆位反而代表風暴正在過去，或者你開始有能力預見、提前準備。換句話說，過去讓你措手不及的情緒起伏，這個月你其實漸漸有能力辨認它的訊號了——只是你還沒完全相信自己的判斷。
+        </div>
+      </article>
+
+      <article class="rune-card c4 reveal">
+        <div class="rune-top">
+          <div class="rune-glyph">ᚠ</div>
+          <div class="rune-name-wrap">
+            <div class="rune-name">Fehu 財富／豐盛</div>
+            <span class="rune-pos pos-reverse">逆位</span>
+          </div>
+        </div>
+        <div class="rune-body">
+          Fehu 逆位提醒你，情感裡的「付出與回報」可能暫時失衡，你給的多，但感受到的回饋少，容易讓你心累、患得患失。這不代表關係沒有價值，而是提醒你該重新檢視：這段關係的「能量交換」是否健康。
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="summary">
+    <div class="summary-box reveal">
+      <span class="quote-mark">"</span>
+      <p>這個月的金牛座，與其把心力都放在「猜對方在想什麼」，不如把焦點拉回自己身上——你的情緒穩定，才是這段關係真正的定海神針。當你不再用對方的反應來決定自己的心情，失衡感才會慢慢消失。</p>
+    </div>
+  </section>
+
+</main>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-inner">
+        <div class="cta-tag">July Collective Session</div>
+        <h2>7月集體體驗冥想</h2>
+        <p>如果你也感覺到這種「忽穩忽亂」的拉扯，7月我們特別安排了一場集體體驗冥想，陪大家一起把散亂的情緒收回來，重新建立內在的安全感與穩定度。請隨時關注最新消息，名額有限喔。</p>
+
+        <div class="cta-divider"></div>
+
+        <div class="booking-block">
+          <h3>麵包學長・金錢靈氣體驗</h3>
+          <p>從情感能量到財富能量，一起把你的磁場調整到豐盛又穩定的狀態。</p>
+          <a class="line-id" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">LINE：@423hhxdn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  ♉ Taurus Tarot &amp; Rune Reading — 2026 July
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.style.animationPlayState = 'running';
+      }
+    });
+  }, {threshold:0.15});
+
+  document.querySelectorAll('.reveal').forEach(el=>{
+    el.style.animationPlayState = 'paused';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
